@@ -1,0 +1,55 @@
+/// Variables
+///
+/// Here we define our Sass variables.
+
+$gutter-horizontal: 1.5em;
+
+/// Colors
+$colors: (
+  primary: #FF8362,
+  secondary: #5D61C4,
+  tertiary: #064755,
+  tertiaryLight: #1E798D,
+  error: #DB1341,
+  success: #3C9680,
+  successDark: #268CA3,
+  surface: #FFFFFF,
+  background: #F2F5F7,
+  onBackground: #424B5A,
+  onBackground2: #767676
+);
+
+/// Spacers
+$spacers: (
+  2: 0.2em,
+  4: 0.4em,
+  6: 0.6em,
+  8: 0.8em,
+  12: 1.2em,
+  16: 1.6em,
+  24: 2.4em,
+  32: 3.2em,
+  40: 4.0em,
+  48: 4.8em,
+  64: 6.4em,
+  80: 8.0em,
+  100: 10.0em,
+);
+
+/// Grid and breakpoints
+$breakpoints: (
+  'sm': 24.375em,
+  'md': 36em,
+  'lg': 48em,
+  'xl': 90em
+);
+
+/// Effects
+$text-shadow: 0px 3.25px 0px rgba(0, 0, 0, 0.15);
+$cta-gradient: linear-gradient(180deg, #ff496f 0%, #ff0035 13.02%, #ff0035 88.54%, #dd163f 100%);
+$cta-gradient-active: linear-gradient(180deg, #f13159 0%, #e4002f 13.02%, #e4002f 88.54%, #d6143c 100%);
+$cta-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+/// Fonts stack
+$space-grotesk: "Space Grotesk", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$barlow: barlow, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen - Login into your account</title>
+    <link rel=" manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/app.min.css">
+    <script src="./js/index.min.js" defer></script>
+</head>
+<body>
+    <section class="signup" id="login">
+        <div class="container">
+            <div class="row-xl">
+                <div class="col-6">
+                    <div class="signup__left">
+                        <div class="signup__left--bg"></div>
+                        
+                        <div class="signup__content">
+                            <img class="signup__back" src="./assets/icons/back-btn.svg" alt="">
+                        
+                            <img class="signup__logo" src="./assets/icons/logo.png" alt="">
+        
+                            <div class="signup__heading">
+                                <h3 class="serif__h1">Welcome Back!</h3>
+                            </div>
+        
+                            <form class="form form__login" action="#">
+
+                                <div class="form__alert">
+                                    <p class="form__alert--text"></p>
+                                </div>
+    
+                                <div class="form__group">
+                                    <label for="email" class="form__label">Email address <span class="form__asterisk">*</span></label>
+                                    <input type="text" name="email" id="email" class="form__input" value="mukhi.mahima@gmail.com" required>
+                                </div>
+                
+                                <div class="form__group">
+                                    <label for="password" class="form__label">Password <span class="form__asterisk">*</span></label>
+                                    <input type="password" name="password" id="password" class="form__input" value="mukhi123" required>
+                                </div>
+        
+                                <input type="submit" class="form__button btn" value="Sign in">
+
+                            </form>
+        
+                            <div class="signup__info signup__info--md">
+                                <a href="#">Forgot password?</a>
+                                <p>Don't have an account? <a href="./signup.html">Sign up </a>for free. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-6">
+                    <div class="signup__right">
+                        <div class="signup__right--bg">
+                            <div class="signup__content">
+                                <p class="signup__title">Transform your neighbourhood with the power of community</p>
+                            </div>
+        
+                            <div class="signup__img--container">
+                                <img src="./assets/images/signup-theme.png" class="signup__img" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+</body>
+</html>

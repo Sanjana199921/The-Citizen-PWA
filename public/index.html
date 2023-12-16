@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen - Welcome to the Citizen</title>
+    <link rel=" manifest" href="./manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/app.min.css">
+    <script src="./js/index.min.js" defer></script>
+    <title>Home</title>
+</head>
+<body>
+    
+    <div id="index">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="nav">
+                        <div class="nav__left">
+                            <a href="./">
+                                <img class="nav__list--back" src="./assets/icons/logo-citizen-v02.svg" alt="citizen logo">
+                            </a>
+                        </div>
+
+                        <div class="nav__middle" style="display: none;">
+                            <!-- <img class="nav__list--back" src="./assets/icons/Add-report-btn.svg" alt="citizen logo"> -->
+                            <img class="nav__list--add" src="./assets/images/Add-report-btn.png" alt="add report">
+                        </div>
+
+                        <div class="nav__right">
+                            <div class="nav__unauthenticated">
+                                <ul class="nav__list">
+                                    <li class="nav__list--item">
+                                        <a href="#about" class="nav__list--link">About</a>
+                                    </li>
+                    
+                                    <li class="nav__list--item">
+                                        <a href="#how-it-works" class="nav__list--link">How it works</a>
+                                    </li>
+                    
+                                    <li class="nav__list--item">
+                                        <a href="./login.html" class="nav__list--link">Sign in</a>
+                                    </li>
+                                </ul>
+
+                                <a href="./signup.html" class="btn btn__nav btn__nav--1">Create your account</a>
+
+                                <img class="nav__burger" src="./assets/icons/hamburger-menu.svg" alt="menu">
+
+                            </div>
+
+                            <div class="nav__authenticated" style="display: none;">
+                                <ul class="nav__list">
+
+                                    <li class="nav__list--item">
+                                        <a href="#" class="btn btn__nav btn__nav--2">Report a problem</a>
+                                    </li>
+
+                                    <li class="nav__list--item">
+                                        <img class="nav__list--icon" src="./assets/icons/notification.svg" alt="citizen logo">
+                                        <div class="badge"></div>
+                                    </li>
+
+                                    <li class="nav__list--item">
+                                        <div class="nav__profile">
+                                            <img class="nav__profile--img" src="./assets/images/profile.png" alt="profile picture">
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+            
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="header__main">
+                            <div class="header__title">
+                                <h1 class="heading index__h1">Unlock the power of community</h1>
+                            </div>
+                
+                            <div class="card__header">
+                                <div class="card__offset">
+                                    <div class="card__offset--front">
+                                        <img class="card__offset--img" src="./assets/images/pexels-thirdman-7656743 1.jpg" alt="">
+                                    </div>
+                    
+                                    <div class="card__offset--back"></div>
+                                </div>
+                            </div>
+                
+                            <div class="header__subtitle">
+                                <p class="header__text header__text--sm">The Citizen App empowers you to act fast and report problems in their neighbourhoods and cities so you improve the quality of life of your communtiy</p>
+                                <p class="header__text header__text--sm">We believe in the radical power of transformation of communities. Come together right now!</p>
+                            </div>
+                
+                            <div class="header__cta">
+                                <a href="./signup.html" class="btn header__cta--btn">Create your account</a>
+                                <a href="./login.html" class="header__cta--link">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+        </header>
+
+        <!--- Main Content Starts Here -->
+        <section id="about" class="index__about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="heading index__h2">About the App</h2>
+
+                        <p class="header__text header__text--lg">Imagine you are walking around your neighbourhood when you see a bunch of garbage pilling up the street. What do you do? Just seat at the curbside and cry? Go back to home and pretend the problem is not there? Or hope or pray to anyone else do something about it?</p>
+                        <p class="header__text header__text--lg">Citizen App is here to help you to connect with the authorities and city administrators to take actions to solve the problem. You can also connect with your neighbours to support each other and track the status of the reports.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="heading index__h2">How it works?</h2>
+                        <p class="header__text header__text--lg">In just a few steps, you can report any type of issue in your neighbourhood: from garbage collection to streetlights issues. The Citizen App helps you take care of your neighbourhood and bulding a stronger and healthier community.</p>
+                        <p class="header__text heading index__sub">See how the app works:</p>
+                    </div>
+                </div>
+
+                <div class="index__example">
+                    <div class="row-xl row-xl-reverse">
+                        <div class="col-6">
+                            <div class="index__example--left">
+                                <div class="card__index">
+                                    
+                                    <div class="card__info">
+                                        <img class="card__info--icon" src="./assets/icons/report-icon.svg" alt="report icon">
+                                        <div class="card__offset">
+                                            <div class="card__offset--front">
+                                                <div class="card__offset--wrapper">
+                                                    <div class="card__offset--content">
+                                                        <h4 class="card__offset--title">1. Report a problem</h4>
+                                                        <p class="card__offset--text">Create a report in a few steps and upload evidences to support the case</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="card__offset--back"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card__info">
+                                        <img class="card__info--icon" src="./assets/icons/location-icon-orange.svg" alt="share location icon">
+                                        <div class="card__offset">
+                                            <div class="card__offset--front">
+                                                <div class="card__offset--wrapper">
+                                                    <div class="card__offset--content">
+                                                        <h4 class="card__offset--title">2. Share the location</h4>
+                                                        <p class="card__offset--text">Share the exact location of the issue. This way the authorities can address it. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="card__offset--back"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card__info">
+                                        <img class="card__info--icon" src="./assets/icons/track-icon.svg" alt="track icon">
+                                        <div class="card__offset">
+                                            <div class="card__offset--front">
+                                                <div class="card__offset--wrapper">
+                                                    <div class="card__offset--content">
+                                                        <h4 class="card__offset--title">3. Track the report status</h4>
+                                                        <p class="card__offset--text">Track the the actions taken by the authorities and city administrators.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="card__offset--back"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card__info">
+                                        <img class="card__info--icon" src="./assets/icons/related-icon.svg" alt="related icon">
+                                        <div class="card__offset">
+                                            <div class="card__offset--front">
+                                                <div class="card__offset--wrapper">
+                                                    <div class="card__offset--content">
+                                                        <h4 class="card__offset--title">4. See related reports</h4>
+                                                        <p class="card__offset--text">See issues reported by your neighbours. You can also comment and upvote them. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="card__offset--back"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="index__example--right">
+                                <div class="index__mockup">
+                                    <img class="index__mockup--img" src="./assets/images/mobile mockup.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="container">
+                    <div class="btn__index">
+                        <a href="./signup.html" class="btn">Get started now!</a>
+                    </div>
+            </div>
+            </div>
+        </section>
+        <!-- Main Content Ends Here -->
+
+
+        <!-- Footer Starts Here -->
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="row-xl">
+                    <div class="col-3 footer__part footer__part--1">
+                        <a href="./">
+                            <img class="footer__logo" src="./assets/icons/logo.png" alt="citizen logo">
+                        </a>
+                    </div>
+
+                    <div class="col-3 footer__part footer__part--1">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__text">Report a problem</a>
+                            </li>
+
+                            <li class="footer__item">
+                                <a href="#" class="footer__text">My reports</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 footer__part footer__part--1">
+                        <div class="footer__item">
+                            <p class="footer__title">Follow The Citizen on:</p>
+                        </div>
+
+                        <div class="footer__item">
+                            <div class="footer__icons">
+                                <a href="#">
+                                    <img class="footer__icons--logo" src="./assets/icons/fb-icon.svg" alt="facebook logo">
+                                </a>
+                                <a href="#">
+                                    <img class="footer__icons--logo" src="./assets/icons/twitter-icon.svg" alt="twitter logo">
+                                </a>
+                                <a href="#">
+                                    <img class="footer__icons--logo" src="./assets/icons/ig-icon.svg" alt="instagram logo">
+                                </a>
+                                <a href="#">
+                                    <img class="footer__icons--logo" src="./assets/icons/discord-icon.svg" alt="discord logo">
+                                </a>
+                                <a href="#">
+                                    <img class="footer__icons--logo" src="./assets/icons/linkedin-icon.svg" alt="linkedin logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 footer__part footer__part--1">
+                        <div class="footer__item">
+                            <p class="footer__title">Subscribe to our newsletter</p>
+                        </div>
+                        <div class="footer__item">
+                            <form action="" class="form__footer">
+                                <input type="text" class="form__input--hollow" placeholder="Please type your email here">
+                                <img class="form__input--icon" src="./assets/icons/arrow.svg" alt="">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Footer ends here -->
+
+    </div>
+
+</body>
+</html>

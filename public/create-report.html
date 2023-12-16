@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" manifest" href="./manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/3.1.3-public-preview.0/SearchBox.css'/>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.1.2-public-preview.15/services/services-web.min.js"></script>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/3.1.3-public-preview.0/SearchBox-web.js"></script>
+    <link rel="stylesheet" href="./css/app.min.css">
+    <script src="./js/index.min.js" defer></script>
+    <title>Citizen - Create a new report</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="nav">
+                    <div class="nav__left">
+                        <a href="./">
+                            <img class="nav__list--back" src="./assets/icons/logo-citizen-v02.svg" alt="citizen logo">
+                        </a>
+                    </div>
+
+                    <div class="nav__middle" style="display: none;">
+                        <!-- <img class="nav__list--back" src="./assets/icons/Add-report-btn.svg" alt="citizen logo"> -->
+                        <img class="nav__list--add" src="./assets/images/Add-report-btn.png" alt="add report">
+                    </div>
+
+                    <div class="nav__right">
+                        <div class="nav__unauthenticated"  style="display: none;">
+                            <ul class="nav__list">
+                                <li class="nav__list--item">
+                                    <a href="#about" class="nav__list--link">About</a>
+                                </li>
+                
+                                <li class="nav__list--item">
+                                    <a href="#how-it-works" class="nav__list--link">How it works</a>
+                                </li>
+                
+                                <li class="nav__list--item">
+                                    <a href="./login.html" class="nav__list--link">Sign in</a>
+                                </li>
+                            </ul>
+
+                            <a href="./signup.html" class="btn btn__nav btn__nav--1">Create your account</a>
+
+                            <img class="nav__burger" src="./assets/icons/hamburger-menu.svg" alt="menu">
+
+                        </div>
+
+                        <div class="nav__authenticated">
+                            <ul class="nav__list">
+
+                                <li class="nav__list--item">
+                                    <a href="./create-report.html" class="btn btn__nav btn__nav--2">Report a problem</a>
+                                </li>
+
+                                <li class="nav__list--item">
+                                    <img class="nav__list--icon" src="./assets/icons/notification.svg" alt="citizen logo">
+                                    <div class="badge"></div>
+                                </li>
+
+                                <li class="nav__list--item">
+                                    <div class="nav__profile">
+                                        <img class="nav__profile--img" src="./assets/images/profile.png" alt="profile picture">
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+
+            <div class="col-6">
+
+                <h1 class="heading report__h1">Report a problem</h1>
+
+                <!-- <p><span>*</span>Required</p> -->
+
+                <form action="" class="form form__report">
+
+                    <div class="form__group">
+                        <label for="title" class="form__label">Title <span class="form__asterisk">*</span> </label>
+                        <p class="form__caption">Give your report a descriptive title</p>
+                        <input type="text" class="form__input" id="title" name="title" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="" class="form__label">Category <span class="form__asterisk">*</span> </label>
+                        <p class="form__caption">Choose the category that best represents the issue</p>
+                        
+                        <select name="category" id="category" required>
+                            <option value="">Select Category</option>
+                            <option value="WFxgVbkji4WiwSLIVHN9">Garbage</option>
+                            <option value="GCDtZS0aDfUe1oyc7aC9">Streetlight</option>
+                            <option value="knfLYIpcxqw3YuLbvPJV">Parks</option>
+                            <option value="sX0ZBumsLJ26rUoj9Ivf">Playground</option>
+                        </select>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="description" class="form__label">Description <span class="form__asterisk">*</span> </label>
+                        <p class="form__caption">Describe the issue with as many details as possible (200 words max)</p>
+                        <textarea name="description" id="description" cols="30" rows="15" required></textarea>
+                    </div>
+
+                    <!-- <div class="form__group">
+                        <label for="address" class="form__label">Address <span class="form__asterisk">*</span> </label>
+                        <p class="form__caption">Share the location where the issue was noticed</p>
+                        <input type="text" class="form__input" id="address" name="address" required>
+                    </div> -->
+
+                    <div class="form__group" id="address">
+                        <label for="address" class="form__label">Address <span class="form__asterisk">*</span> </label>
+                        <p class="form__caption">Share the location where the issue was noticed</p>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="locationDetails" class="form__label">Location Details (optional)</label>
+                        <p class="form__caption">Add details about the location (e.g. near school, near bus stop, etc. 200 words max)</p>
+                        <textarea name="locationDetails" id="locationDetails" cols="30" rows="15" required></textarea>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="address" class="form__label">Evidences <span class="form__asterisk">*</span> </label>
+                        <p class="form__caption">Share the location where the issue was noticed</p>
+                        <button id="camera--upload">upload media</button>
+                        <main id="camera">
+
+                            <!-- Camera sensor -->
+                            <canvas id="camera--sensor"></canvas>
+                            
+                            <!-- Camera view -->
+                            <video id="camera--view" autoplay playsinline></video>
+                
+                            <!-- Camera trigger -->
+                            <button class="btn" id="camera--trigger">Take a picture</button>
+                
+                        </main>
+
+                        <!-- Camera output -->
+                        <div id="camera--output">
+                            <!-- <img src="//:0" alt="" id="camera--output"> -->
+                        </div>
+                    </div>
+
+                    <input type="submit" id="reportSubmit" class="btn" value="submit">
+
+                </form>
+            </div>
+
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+    <!-- Footer Starts Here -->
+        
+    <footer class="footer">
+        <div class="container">
+            <div class="row-xl">
+                <div class="col-3 footer__part footer__part--1">
+                    <a href="./">
+                        <img class="footer__logo" src="./assets/icons/logo.png" alt="citizen logo">
+                    </a>
+                </div>
+
+                <div class="col-3 footer__part footer__part--1">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__text">Report a problem</a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__text">My reports</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-3 footer__part footer__part--1">
+                    <div class="footer__item">
+                        <p class="footer__title">Follow The Citizen on:</p>
+                    </div>
+
+                    <div class="footer__item">
+                        <div class="footer__icons">
+                            <a href="#">
+                                <img class="footer__icons--logo" src="./assets/icons/fb-icon.svg" alt="facebook logo">
+                            </a>
+                            <a href="#">
+                                <img class="footer__icons--logo" src="./assets/icons/twitter-icon.svg" alt="twitter logo">
+                            </a>
+                            <a href="#">
+                                <img class="footer__icons--logo" src="./assets/icons/ig-icon.svg" alt="instagram logo">
+                            </a>
+                            <a href="#">
+                                <img class="footer__icons--logo" src="./assets/icons/discord-icon.svg" alt="discord logo">
+                            </a>
+                            <a href="#">
+                                <img class="footer__icons--logo" src="./assets/icons/linkedin-icon.svg" alt="linkedin logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 footer__part footer__part--1">
+                    <div class="footer__item">
+                        <p class="footer__title">Subscribe to our newsletter</p>
+                    </div>
+                    <div class="footer__item">
+                        <form action="" class="form__footer">
+                            <input type="text" class="form__input--hollow" placeholder="Please type your email here">
+                            <img class="form__input--icon" src="./assets/icons/arrow.svg" alt="">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer ends here -->
+
+</body>
+</html>

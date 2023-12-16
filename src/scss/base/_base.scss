@@ -1,0 +1,38 @@
+/// Base
+///
+/// We define global styles here, such as the font-size,font-family, box-sizing
+/// for the universal, html and body tags.
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 40%; // sets the global font size
+    scroll-behavior: smooth;
+
+    @include respond(sm) {
+        font-size: 62.5%;
+    }
+  
+}
+
+body {
+  font-family: $barlow;
+  font-weight: 400;
+  overflow-x: hidden;
+  color: map-get($colors, deep-sea);
+  background-color: map-get($colors, background);
+}
+
+.body-inactive{
+  overflow-y: hidden;
+}
+
+.legal-list{
+  margin-left: 2.6em;
+}

@@ -1,0 +1,22 @@
+/// Mixins
+///
+/// Set of useful functions used in entire Sass codebase.
+
+/// Media query manager.
+/// $breakpoint arguement choices:
+/// - phone-break
+/// - tab-break
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin respond($bp) {
+  @media only screen and (min-width: map-get($breakpoints, $bp)) {
+    @content;
+  }
+}

@@ -1,0 +1,31 @@
+@keyframes slideIn{
+    0%{
+        transform: translateY(-13rem);
+        opacity: 0%;
+    }
+
+    80%{
+        opacity: 100%;
+    }
+
+    100%{
+        transform: translateY(0);
+        
+    }
+}
+
+@keyframes slideOut{
+    0%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+
+    90%{
+        transform: translateY(-13rem);
+
+    }
+
+    100%{
+        opacity: 0;
+    }
+}

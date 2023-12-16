@@ -1,0 +1,33 @@
+/// App
+///
+/// This this the entry point for Sass where we import all other Sass files.
+
+/// imports sass animation
+@import 'abstracts/animation';
+/// imports sass variables
+@import 'abstracts/variables';
+/// imports sass mixins
+@import 'abstracts/mixins';
+
+// /// imports base css used by our app
+@import 'base/base';
+// /// imports general headings, paragraphs used through our app
+@import 'base/typography';
+
+@import 'components/form';
+@import 'components/btn';
+@import 'components/card';
+
+
+// /// imports reusable grid layout
+@import 'layout/grid';
+
+// /// imports reusable header layout
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/footer';
+
+
+@import 'pages/signup';
+@import 'pages/index';
+@import 'pages/report';

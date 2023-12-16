@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+    <script type="module" src="../src/js/home.js" defer></script>
+    <title>Home</title>
+
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.21.3/maps/maps.css'>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.21.3/maps/maps-web.min.js"></script>
+    <link rel='stylesheet' type='text/css'
+    href='https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/3.1.3-public-preview.0/SearchBox.css' />
+<script
+    src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.1.2-public-preview.15/services/services-web.min.js"></script>
+<script
+    src="https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/3.1.3-public-preview.0/SearchBox-web.js"></script>
+    <script>(function(){ window.SS = window.SS || {}; SS.Require = function (callback){ if (typeof callback === 'function') { if (window.SS && SS.EventTrack) { callback(); } else { var siteSpect = document.getElementById('siteSpectLibraries'); var head = document.getElementsByTagName('head')[0]; if (siteSpect === null && typeof head !== 'undefined') { siteSpect = document.createElement('script'); siteSpect.type = 'text/javascript'; siteSpect.src = '/__ssobj/core.js+ssdomvar.js+generic-adapter.js';siteSpect.async = true; siteSpect.id = 'siteSpectLibraries'; head.appendChild(siteSpect); } if (window.addEventListener){ siteSpect.addEventListener('load', callback, false); } else { siteSpect.attachEvent('onload', callback, false); } } } };})(); 
+    </script>
+   
+    <script src="https://cdn.jsdelivr.net/gh/AmagiTech/JSLoader/amagiloader.js"></script>
+    <script type="module" src="../src/js/nearest.js" defer></script> 
+    
+</head>
+<style>
+    #map {
+        width: 100px;
+        height: 100px;
+        display: none;
+    }
+    #search {
+        width: 300px;
+        height: 300px;
+        display: none;
+    }
+
+
+    </style>
+<body>   
+    <div class="container">
+        <div class="logo">
+            <a href="#back"><img src="./assets/logo.svg" alt=""></a>
+        </div>
+    <div class="nav">     
+
+    
+         <ul class="nav-list">
+            <li><a href="create-report.html" class="create-link">Create new report</a></li>
+            
+            <li><a href="#how-it-works" class="icon"><img class="icon" src="./assets/icon-notifications.png"></a></li>
+            <li><a href="#how-it-works" class="icon"><img src="./assets/profile.jpg" alt="profile icon"></a></li>
+           
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="main-heading-grp">
+        <div class="welcome-header" >
+        <h1 class="mainHead">Hi, Julia!</h1>
+        <div id="nearestCount"></div>
+        <!-- <h3>There's <a href="#">4 new issues</a> reported in your neighbourhood</h3> -->
+        </div>
+    </div>
+
+    <div class="common">
+        <span class="filterText"><a class="active" href="#" id="nearest">Nearest</a></span>
+        <span class="filterText"><a href="">Latest</a></span>
+    </div>
+
+    <div class="left">
+        <span class="filterIcon"><a href="#" class="active" id="all">All</a></span>
+        <span class="filterIcon"><a href="#" id="garbage">Garbage</a></span>
+        <span class="filterIcon"><a href="#" id="streetlight">Streetlight</a></span>
+        <span class="filterIcon"><a href="#" id="park">Parks</a></span>
+        <span class="filterIcon"><a href="#" id="playground">Playground</a></span>
+    </div>
+   
+    <div class="right">
+        <span class="filterIcon"><a id="mapView" href="#">Map View</a></span>
+       
+                <div id="search"></div>
+                <div id="map"></div>
+     
+    </div>
+</div>
+
+<!--- Main Content Starts Here -->
+<div class="container">
+    <div class="row">
+        <div class="cards" id="cards">
+                  
+        </div>
+        <!-- Pagination starts here -->
+        <div class="pagination">
+            <ul>
+                <li><a href=""> &lt; </a></li>
+                <li><a href="">1</a></li>
+                <li><a href="" class="active">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">...</a></li>
+                <li><a href=""> &gt; </a></li>
+            </ul>
+        </div>
+        <!-- Pagination ends here-->
+    </div>
+</div>
+<!-- Main Content Ends Here -->
+
+<!-- Footer Starts Here -->
+<footer>
+<div class="container">
+    <div class="wrapper">
+    <div class="col">
+        <div class="logoBig">
+            <a href="#back"><img src="../.../assets/logo.svg" alt=""></a>
+        </div>
+    </div>
+    
+    <div class="col">
+        <a href="#">Create a report</a>
+        <a href="#">My Reports</a>
+    </div>
+
+    <div class="col">
+        <a href="#">Follow Citizen on:</a>
+        <div class="icons">
+            <span>icon1</span>
+            <span>icon2</span>
+            <span>icon3</span>
+            <span>icon4</span>
+            <span>icon5</span>
+        </div>
+    </div>
+
+    <div class="col">
+        <a href="#">Subscribe to our newsletter</a>
+        <input type="text" placeholder="Please enter your email address here">
+        <button type="submit">Submit</button>
+    </div>   
+</div>
+</div>
+
+</footer>
+<!-- Footer ends here -->
+</body>
+</html>

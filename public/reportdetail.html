@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" manifest" href="./manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/app.min.css">
+    <link rel="stylesheet" href="./css/reportdetail.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- <script>
+        console.log("=============== Data from Local storage");
+        console.log(JSON.parse(localStorage.getItem("Report")));
+        let data = JSON.parse(localStorage.getItem("Report"));
+        console.log(`============ address:${data.address}`);
+        
+    </script> -->
+    <script src="./js/index.min.js" defer></script>
+    <script type="module" src="../src/js/reportdetail.js" defer></script>
+    <script type="module" src="../src/js/home.js" defer></script>
+    
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.21.3/maps/maps.css'>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.21.3/maps/maps-web.min.js"></script>
+    <link rel='stylesheet' type='text/css'
+    href='https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/3.1.3-public-preview.0/SearchBox.css' />
+<script
+    src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.1.2-public-preview.15/services/services-web.min.js"></script>
+<script
+    src="https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/3.1.3-public-preview.0/SearchBox-web.js"></script>
+    <script>(function(){ window.SS = window.SS || {}; SS.Require = function (callback){ if (typeof callback === 'function') { if (window.SS && SS.EventTrack) { callback(); } else { var siteSpect = document.getElementById('siteSpectLibraries'); var head = document.getElementsByTagName('head')[0]; if (siteSpect === null && typeof head !== 'undefined') { siteSpect = document.createElement('script'); siteSpect.type = 'text/javascript'; siteSpect.src = '/__ssobj/core.js+ssdomvar.js+generic-adapter.js';siteSpect.async = true; siteSpect.id = 'siteSpectLibraries'; head.appendChild(siteSpect); } if (window.addEventListener){ siteSpect.addEventListener('load', callback, false); } else { siteSpect.attachEvent('onload', callback, false); } } } };})(); 
+    
+    
+    </script>
+   
+  
+    <title>Citizen - my reports</title>
+  
+</head>
+<style>
+    #map1 {
+        width: 100%;
+        height: 300px;
+        display: block;
+       
+    }
+    </style>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="nav">
+                    <div class="nav__left">
+                        <a href="./">
+                            <img class="nav__list--back" src="./assets/icons/orange-back.svg" alt="citizen logo">
+                        </a>
+                    </div>
+
+                    <div class="nav__middle" style="display: none;">
+                        <!-- <img class="nav__list--back" src="./assets/icons/Add-report-btn.svg" alt="citizen logo"> -->
+                        <img class="nav__list--add" src="./assets/images/Add-report-btn.png" alt="add report">
+                    </div>
+
+                    <div class="nav__right">
+                        <div class="nav__unauthenticated"  style="display: none;">
+                            <ul class="nav__list">
+                                <li class="nav__list--item">
+                                    <a href="#about" class="nav__list--link">About</a>
+                                </li>
+                
+                                <li class="nav__list--item">
+                                    <a href="#how-it-works" class="nav__list--link">How it works</a>
+                                </li>
+                
+                                <li class="nav__list--item">
+                                    <a href="./login.html" class="nav__list--link">Sign in</a>
+                                </li>
+                            </ul>
+
+                            <a href="./signup.html" class="btn btn__nav btn__nav--1">Create your account</a>
+
+                            <img class="nav__burger" src="./assets/icons/hamburger-menu.svg" alt="menu">
+
+                        </div>
+
+                        <div class="nav__authenticated">
+                            <ul class="nav__list">
+
+                                <li class="nav__list--item">
+                                    <a href="./create-report.html" class="btn btn__nav btn__nav--2">Report a problem</a>
+                                </li>
+
+                                <li class="nav__list--item">
+                                    <img class="nav__list--icon" src="./assets/icons/notification.svg" alt="citizen logo">
+                                    <div class="badge"></div>
+                                </li>
+
+                                <li class="nav__list--item">
+                                    <div class="nav__profile">
+                                        <img class="nav__profile--img" src="./assets/images/profile.png" alt="profile picture">
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                 <div class="reportdetail" id="report">
+                <!--    <h1 class="reportdetail__h1">Poor maintenance of playground</h1>
+                    <div class="reportinfo">
+                        <h3 class="reportdetail__h3">Sep 17, 2022 | 8.30 am</h3>
+                        <h3 class="reportdetail__h3">posted by Ana B.</h3>
+                        <div class="status"><a href="#">In review</a></div>
+                          
+                    </div>
+
+                        <div class="tags">
+                            <span class="filterIcon report activeIcon clear"><a href="">Park</a></span>
+                            <span class="filterIcon report clear"><a href="">Bench</a></span>
+                            <span class="filterIcon report clear"><a href="">Garbage</a></span>
+                        </div>
+
+
+                        <div class="icons">
+                            <a href="#">
+                                <img  src="./assets/icons/comment-icon.svg" alt="comment icon"> <span>22</span>
+                            </a>
+                            <a href="#">
+                                <img  src="./assets/icons/upvote-icon.svg" alt="upvote icon"> <span>22</span>
+                            </a>
+                            <a href="#">
+                                <img  src="./assets/icons/share-icon.svg" alt="share icon"> <span>22</span>
+                            </a>
+                        </div> -->
+                        
+                    </div>
+
+                <div class="reportdetail__img" id="reportImage" >
+                    
+                     <!-- <img  src="assets/sample.jpg" width="434px" height="376px"> -->
+                </div> 
+            </div>
+           
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="reportdesc" id="reportDesc">
+                    <!-- <div class="detailheading">Description</div>
+                    <div class="detailtext">Aliquam vitae turpis odio. Nam suscipit nec felis eget maximus. Duis egestas tortor ut mauris fringilla, ut aliquam nisi gravida. Cras aliquet feugiat ante, et malesuada neque tristique non. Nulla facilisi. Donec volutpat nisl nec justo cursus, ut sollicitudin odio interdum.</div> -->
+                    <span><a href="">Read More ^</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="col-12" >
+                <div class="reportdesc" id="reportLocation" >
+                    <!-- <div class="detailheading">Location</div>
+                    <div class="detailtext">280 7th East - Vancouver - BC V5T 0B4</div> -->
+                    
+                    <!-- <div class="mapContainer" id="viewmap" style="border:20px solid rgb(60, 7, 250);">   
+                        <div id="search1"></div>
+                        <div id="map1"></div>
+                    </div> -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <div class="more">
+                <!-- Comment Section Starts here -->
+                <div class="commentSection">
+                    <div class="detailheading">Comments</div>
+                    <h3>What do you think about this issue?</h3>
+                    <div class="commentContainer">
+                       <div class="comment">
+                            <h2>lan W.</h2> <span>16h</span>
+                            <p>Donec volutpat nisl nec justo cursus, ut sollicitudin odio interdum. Aliquam vitae turpis odio. Nam suscipit nec felis eget maximus. Duis egestas tortor ut mauris fringilla, ut aliquam nisi gravida. </p>
+
+                            <div class="commentstats"><span>Upvote (2)</span><span>Share (112)</span><span>Reply</span></div>
+                        </div>
+                    </div>
+
+                    <div class="commentContainer">
+                        <div class="comment">
+                             <h2>lan W.</h2> <span>16h</span>
+                             <p>Donec volutpat nisl nec justo cursus, ut sollicitudin odio interdum. Aliquam vitae turpis odio. Nam suscipit nec felis eget maximus. Duis egestas tortor ut mauris fringilla, ut aliquam nisi gravida. </p>
+ 
+                             <div class="commentstats"><span>Upvote (2)</span><span>Share (112)</span><span>Reply</span></div>
+                         </div>
+                     </div>
+
+                     <div class="commentContainer">
+                        <div class="comment">
+                             <h2>lan W.</h2> <span>16h</span>
+                             <p>Donec volutpat nisl nec justo cursus, ut sollicitudin odio interdum. Aliquam vitae turpis odio. Nam suscipit nec felis eget maximus. Duis egestas tortor ut mauris fringilla, ut aliquam nisi gravida. </p>
+ 
+                             <div class="commentstats"><span>Upvote (2)</span><span>Share (112)</span><span>Reply</span></div>
+                         </div>
+                     </div>
+
+                     <div class="commentContainer">
+                        <div class="comment">
+                             <h2>lan W.</h2> <span>16h</span>
+                             <p>Donec volutpat nisl nec justo cursus, ut sollicitudin odio interdum. Aliquam vitae turpis odio. Nam suscipit nec felis eget maximus. Duis egestas tortor ut mauris fringilla, ut aliquam nisi gravida. </p>
+ 
+                             <div class="commentstats"><span>Upvote (2)</span><span>Share (112)</span><span>Reply</span></div>
+                         </div>
+                     </div>
+
+                     <div class="commentContainer">
+                        <div class="comment">
+                             <h2>lan W.</h2> <span>16h</span>
+                             <p>Donec volutpat nisl nec justo cursus, ut sollicitudin odio interdum. Aliquam vitae turpis odio. Nam suscipit nec felis eget maximus. Duis egestas tortor ut mauris fringilla, ut aliquam nisi gravida. </p>
+ 
+                             <div class="commentstats"><span>Upvote (2)</span><span>Share (112)</span><span>Reply</span></div>
+                         </div>
+                     </div>
+                     
+                     <button type="submit" class="cmntbtn">Load more comments</button>
+                    
+                </div>
+                 <!-- Comment Section Ends here -->
+               
+           
+                 <!-- Similar Reports Section Starts here -->
+                <div class="moreReportSection">
+                    <div class="detailheading">Similar Reports</div>
+                    <h3>See reports related to this issue</h3>
+
+                    <div class="reportContainer">
+                        <img src="assets/sample.jpg" class="reportImg">
+                        <h1>Poor maintainance of playground</h1>
+                        
+                        <div class="moreReportinfo">
+                            <h3 class="reportdetail__h3">Sep 17, 2022 | 8.30 am</h3>
+                            <h3 class="reportdetail__h3">posted by Ana B.</h3>
+                            <div class="status"><a href="#">In review</a></div>
+                              
+                        </div>
+    
+                        <div class="tags">
+                            <span class="filterIcon report clear"><a href="">Park</a></span>
+                            <span class="filterIcon report clear"><a href="">Bench</a></span>
+                            <span class="filterIcon report clear"><a href="">Garbage</a></span>
+                        </div>
+
+                        <div class="icons">
+                            <a href="#">
+                                <img  src="./assets/icons/comment-icon.svg" alt="comment icon"> <span>22</span>
+                            </a>
+                            <a href="#">
+                                <img  src="./assets/icons/upvote-icon.svg" alt="upvote icon"> <span>22</span>
+                            </a>
+                           
+                        </div>
+                    </div>
+
+                    <div class="reportContainer">
+                        <img src="assets/sample.jpg" class="reportImg">
+                        <h1>Poor maintainance of playground</h1>
+                        
+                        <div class="moreReportinfo">
+                            <h3 class="reportdetail__h3">Sep 17, 2022 | 8.30 am</h3>
+                            <h3 class="reportdetail__h3">posted by Ana B.</h3>
+                            <div class="status"><a href="#">In review</a></div>
+                              
+                        </div>
+    
+                        <div class="tags">
+                            <span class="filterIcon report clear"><a href="">Park</a></span>
+                            <span class="filterIcon report clear"><a href="">Bench</a></span>
+                            <span class="filterIcon report clear"><a href="">Garbage</a></span>
+                        </div>
+
+                        <div class="icons">
+                            <a href="#">
+                                <img  src="./assets/icons/comment-icon.svg" alt="comment icon"> <span>22</span>
+                            </a>
+                            <a href="#">
+                                <img  src="./assets/icons/upvote-icon.svg" alt="upvote icon"> <span>22</span>
+                            </a>
+                           
+                        </div>
+                    </div>
+                    <a href="#" class="button">See all Reports</a>
+                </div>
+                <!-- Similar Reports Section Ends here -->
+           
+        </div>
+    </div>
+  
+
+    <!-- Footer Starts Here -->
+        
+    <footer class="footer">
+        <div class="container">
+            <div class="row-xl">
+                <div class="col-3 footer__part footer__part--1">
+                    <a href="./">
+                        <img class="footer__logo" src="./assets/icons/logo.png" alt="citizen logo">
+                    </a>
+                </div>
+
+                <div class="col-3 footer__part footer__part--1">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="./create-report.html" class="footer__text">Report a problem</a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a href="#" class="footer__text">My reports</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-3 footer__part footer__part--1">
+                    <div class="footer__item">
+                        <p class="footer__title">Follow The Citizen on:</p>
+                    </div>
+
+                    <div class="footer__item">
+                        <div class="footer__icons">
+                            <a href="#">
+                                <img class="footer__icons--logo" src="./assets/icons/fb-icon.svg" alt="facebook logo">
+                            </a>
+                            <a href="#">
+                                <img class="footer__icons--logo" src="./assets/icons/twitter-icon.svg" alt="twitter logo">
+                            </a>
+                            <a href="#">
+                                <img class="footer__icons--logo" src="./assets/icons/ig-icon.svg" alt="instagram logo">
+                            </a>
+                            <a href="#">
+                                <img class="footer__icons--logo" src="./assets/icons/discord-icon.svg" alt="discord logo">
+                            </a>
+                            <a href="#">
+                                <img class="footer__icons--logo" src="./assets/icons/linkedin-icon.svg" alt="linkedin logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 footer__part footer__part--1">
+                    <div class="footer__item">
+                        <p class="footer__title">Subscribe to our newsletter</p>
+                    </div>
+                    <div class="footer__item">
+                        <form action="" class="form__footer">
+                            <input type="text" class="form__input--hollow" placeholder="Please type your email here">
+                            <img class="form__input--icon" src="./assets/icons/arrow.svg" alt="">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer ends here -->
+
+</body>
+</html>

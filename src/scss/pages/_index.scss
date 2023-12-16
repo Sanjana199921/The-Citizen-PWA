@@ -1,0 +1,62 @@
+.index {
+    &__about {
+        margin-bottom: 4.8rem;
+    }
+
+    &__h1 {
+        font-size: 3.8rem;
+        margin-bottom: 2.4rem;
+
+        @include respond(xl) {
+            font-size: 6.4rem;
+        }
+    }
+
+    &__h2 {
+        font-size: 3rem;
+        margin-bottom: 0.9rem;
+
+        @include respond(xl) {
+            font-size: 6.4rem;
+        }
+    }
+
+    &__sub {
+        margin-bottom: 4rem;
+        font-size: 1.8rem;
+
+        @include respond(xl) {
+            font-size: 2.4rem;
+            margin-bottom: 8rem;
+        }
+    }
+
+    &__example {
+        margin-bottom: 5.4rem;
+
+        @include respond(xl) {
+            margin-bottom: 7.9rem;
+        }
+
+        &--left {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100%;
+        }
+    }
+
+    &__mockup {
+        &--img {
+            max-width: 30rem;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+
+            @include respond(xl) {
+                max-width: 49rem;
+            }
+        }
+    }
+
+}

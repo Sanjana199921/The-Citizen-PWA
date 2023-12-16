@@ -1,0 +1,164 @@
+.signup {
+    position: relative;
+
+    &__logo {
+        display: block;
+        max-width: 20em;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 5.6em;
+
+        @include respond(xl) {
+            margin: 0;
+            margin-bottom: 7.2em;
+            max-width: 33.6em;
+        }
+
+    }
+
+    &__back {
+        position: absolute;
+        max-width: 2.8em;
+        width: 100%;
+        height: auto;
+
+        @include respond(xl) {
+            margin-bottom: 6.9em;
+            position: relative;
+        }
+    }
+
+    &__heading {
+        margin: 0 auto;
+        margin-bottom: 5.6em;
+        max-width: 24em;
+        width: 100%;
+
+        @include respond(xl) {
+            max-width: 100%;
+        }
+    }
+
+    &__info {
+        text-align: center;
+        font-family: $space-grotesk;
+        font-size: 1.6em;
+        margin-bottom: 4.7em;
+
+        &:not(:last-child) {
+            margin-bottom: 1.2em;
+        }
+
+        @include respond(xl) {
+            text-align: left;
+            margin-bottom: 14rem;
+        }
+
+        &--md {
+            @include respond(xl) {
+                margin-bottom: 42rem;
+            }  
+        }
+
+        &--lg {
+            @include respond(xl) {
+                margin-bottom: 56.7rem;
+            }  
+        }
+    }
+
+    &__left {
+        padding-top: 3em;
+        max-width: 50.5em;
+        margin: 0 auto;
+
+        @include respond(xl){
+            padding-top: 5em;
+            margin: 0;
+        }
+
+        &--bg {
+            position: absolute;
+            background: #F2F5F7;
+            width: 100%;
+            z-index: 1;
+            left: 0;
+
+            @include respond(xl){
+                width: 50%;
+            }
+        }
+
+    }
+
+    &__right {
+
+        &--bg {
+            background: map-get( $colors, secondary );;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            z-index: 2;
+            padding-top: 3em;
+        
+            @include respond(xl){
+                padding-top: 22.7em;
+                width: 50%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 3;
+    }
+
+    &__title {
+        margin: 0 auto;
+        margin-top: 3.6rem;
+        margin-bottom: 3.6rem;
+        color: map-get( $colors, surface );
+        font-size: 2.4em;
+        font-family: $space-grotesk;
+        font-weight: 500;
+        text-align: center;
+        max-width: 37.2rem;
+
+        @include respond(xl) {
+            font-size: 4.8em;
+            max-width: 54.1rem;
+            margin-bottom: 6.5rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+
+        &--container {
+            width: 100%;
+            z-index: 2;
+            left: 0;
+            margin-bottom: 4rem;
+        }
+
+        @include respond(lg) {
+            max-width: 100%;
+            width: auto;
+        }
+    }
+
+    &__text {
+        font-family: $space-grotesk;
+        font-size: 2.4em;
+        margin-bottom: 5.6rem;
+        text-align: center;
+
+        @include respond(lg) {
+            text-align: left;
+        }
+    }
+}

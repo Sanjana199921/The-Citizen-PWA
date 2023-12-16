@@ -1,0 +1,108 @@
+/// Grid
+///
+/// Defines the basic layout of the website
+
+/// Container
+///
+/// Container sets the min-width of the layout to ensure that no element
+/// exceeds the mininum with allowed in that screen size.
+
+.container {
+    flex: 1;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 36.0em !important;
+
+  @include respond(md){
+    max-width: 48.0em !important;
+  }
+
+  @include respond(lg){
+    max-width: 72em !important;
+  }
+
+  @include respond(xl){
+    max-width: 114.6em !important;
+  }
+
+  &-fluid {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+}
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    [class^="col-"] {
+        padding: 0 $gutter-horizontal;
+    }
+
+    &-reverse{
+        flex-direction: row-reverse;
+    }
+
+
+    @for $i from 1 through 12 {
+        @each $size, $unit in $breakpoints {
+
+            &-#{$size}{
+                @extend .row;
+                
+                @include respond($size){
+                    flex-direction: row;
+
+                    & .col-#{$i}{
+                        min-width: 0;
+                        width: 100%;
+                        flex: 0 0 calc( (#{$i}/ 12) * 100%);
+                    }
+                }
+            }
+
+            &-#{$size}-reverse{
+                @extend .row;
+                
+                @include respond($size){
+                    flex-direction: row-reverse;
+
+                    & .col-#{$i}{
+                        min-width: 0;
+                        width: 100%;
+                        flex: 0 0 calc( (#{$i}/ 12) * 100%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.flex{
+  display: flex;
+}
+
+// @each $size in $breakpoints {
+//   .flex-#{$size}{
+//     display: flex;
+//     flex-direction: column;
+  
+//     @include respond(#{$size}){
+//       flex-direction: row;
+//     }
+//   }
+
+// //   .flex-#{$size}-reverse{
+// //     display: flex;
+// //     flex-direction: column-reverse;
+  
+// //     @include respond(#{$size}){
+// //       flex-direction: row;
+// //     }
+// //   }
+// }

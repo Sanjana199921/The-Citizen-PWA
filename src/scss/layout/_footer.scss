@@ -1,0 +1,68 @@
+.footer {
+
+    font-family: $space-grotesk;
+    background-color: map-get( $colors, tertiary );
+    padding: 5rem 0;
+
+    @include respond(md) {
+        padding: 10rem 0;
+    }
+
+    &__part {
+        margin-bottom: 8rem;
+
+        @include respond(xl) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__logo {
+        max-width: 20rem;
+        width: 100%;
+        height: auto;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        color: map-get( $colors, surface );
+
+        &:not(:last-child) {
+            margin-bottom: 2.8rem;
+        }
+    }
+
+    &__text {
+        &,
+        &:link,
+        &:visited {
+            color: map-get( $colors, surface );
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    &__icons {
+        display: flex;
+        max-width: 100%;
+        flex-wrap: wrap;
+
+        @include respond(xl) {
+            flex-wrap: nowrap;
+        }
+
+        &--logo {
+            margin-right: 2rem;
+            max-width: 3.5rem;
+            width: 100%;
+        }
+    }
+
+}

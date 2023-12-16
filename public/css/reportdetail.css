@@ -1,0 +1,205 @@
+.reportdetail {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    float: left;
+    color:#505D68;
+}
+.reportdetail__h1 {
+    font-size: 4.8rem;
+    text-align: left;
+    margin-bottom: 5.6rem;
+    
+    width: 100%;
+    float: left;
+
+}
+
+
+.reportinfo {
+    width: 75%;
+}
+.reportdetail__h3 {
+    font-size: 1.3rem;
+    width: 70%;
+}
+
+.tags {
+    margin: -15px 0 0 0;
+}
+
+.status {
+    background-color: #505D68;
+    
+    float: right;
+    padding: 5px 15px;
+    border-radius: 5px;
+    position: relative;
+    top:-30px;
+}
+
+.status a {
+    color:#FBFDFF;
+    font-size:1.2rem;
+}
+.reportdetail__img {
+    display: flex;
+    float: right;
+    border: 1px solid #424B5A;
+}
+.filterIcon {
+    margin: 0 10px 0 0;
+}
+.filterIcon a {
+    background-color: #C7CFEC !important;
+    color:#263238 !important;
+    font-size: 1.5rem;
+    
+}
+
+.icons {
+    margin: 30px 0 0 0;
+}
+
+
+.reportdetail .icons span {
+    
+    margin: 0 20px 0 5px;
+    font-size: 1.5rem;
+    color:#263238;
+}
+
+.icons img {
+    vertical-align: middle;
+    margin: -5px 0 0 0;
+}
+.reportdesc {
+    color:#505D68;
+    margin: 30px 0 0 0;
+}
+
+.detailheading {
+    margin: 20px 0 0 0;
+    font-size: 2.2rem;
+}
+.detailtext {
+    margin: 10px 0 0 0;
+    font-size: 1.7rem;
+}
+.reportdesc span {
+    font-size: 1.6rem;
+    margin: 10px 0 0 0;
+    display: block;
+}
+.reportdesc span a {
+    color:#505D68;
+}
+
+.reportdesc .map {
+    min-height: 745px;
+    /* background-color: silver; */
+    margin: 10px 0 0 0;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+.commentSection {
+    width: 70%;
+   
+    min-height: 50px;
+    /* background-color: lightblue; */
+   
+    margin-right: 20px;
+}
+.moreReportSection {
+    width: 30%;
+    min-height: 50px;
+    /* background-color: lightgray; */
+    
+}
+.moreReportSection .button {
+    color: #505D68;
+    display: inline-block;
+    margin: 30px 0 0 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.moreReportinfo {
+    margin: 15px 0 0 0;
+    color: #505D68;
+}
+.more {
+    display: flex;
+    padding: 0 1.3%;
+    color:#505D68;
+    
+}
+.reportContainer {
+    margin: 30px 0 0 0;
+    display: inline-block;
+}
+.reportContainer .reportImg{
+    margin: 0 0 15px 0;
+    max-height: 271px;
+    border: 1px solid #424B5A;
+    min-width: 100%;
+}
+.reportContainer .tags .filterIcon, .reportContainer .tags .filterIcon a {
+    margin: 0 2px 0 0;
+}
+.reportContainer .icons {
+    margin: 0;
+    float: right;
+}
+.reportContainer .icons a span {
+    margin: 0px 5px 0 3px;
+    font-size: 1.2rem;
+    color:#505D68;
+}
+.commentContainer {
+    
+    padding-bottom: 25px;
+    margin: 25px 0 0 0;
+}
+.commentContainer:not(:last-child) {
+    border-bottom: 1px solid lightgray;
+}
+.comment {
+    margin: 10px 0 0 0;
+    color: #505D68;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.comment span {
+    margin: 0 0 0 15px;
+    color:#838993;
+}
+.comment p {
+    font-size: 1.3rem;
+    color: #424B5A;
+}
+.commentstats {
+    display: flex;
+}
+
+.commentstats span {
+    margin: 15px 15px 0 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    
+
+}
+.cmntbtn
+{
+    padding: 1.5rem 2rem;
+    margin: 5rem 0 0 0;
+    background-color: #505D68;
+    color:#fff;
+    font-size: 1.4rem;
+    border-radius: 3px;
+    border: 0;
+}
+
+   

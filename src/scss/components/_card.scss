@@ -1,0 +1,124 @@
+.card {
+
+    &__index {
+        margin-bottom: 4rem;
+    }
+
+    &__header {
+        max-width: 33.7rem;
+        width: 90%;
+        height: 26.9rem;
+        margin: 0 auto;
+        margin-bottom: 5.2rem;
+
+        @include respond(lg) {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        @include respond(xl) {
+            max-width: 52rem;
+        }
+    }
+
+    &__info {
+        position: relative;
+        max-width: 34.7rem;
+        width: 100%;
+        height: 12.2rem;
+        margin: 0 auto;
+
+        &:not(:last-of-type) {
+            margin-bottom: 4rem;
+
+            @include respond(xl) {
+                margin-bottom: 12rem;
+            }
+        }
+
+        @include respond(xl) {
+            max-width: 100%;
+        }
+
+        &--icon {
+            position: absolute;
+            right: 22px;
+            top: -22px;
+            z-index: 3;
+        }
+    }
+    
+    &__offset {
+        position: relative;
+        font-family: $space-grotesk;
+
+        &--front {
+            position: relative;
+            z-index: 2;
+        }
+
+        &--back {
+            background-color: map-get( $colors, tertiaryLight );
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0.8rem;
+            top: 0.8rem;
+            z-index: 1;
+            border-radius: 0.9rem;
+        }
+
+        &--img {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.9rem;
+            margin-left: -0.4rem;
+            margin-top: -0.4rem;
+        }
+
+        &--wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border: 0.1rem solid map-get( $colors, tertiaryLight );
+            background-color: map-get($colors, background );
+            border-radius: 0.9rem;
+            z-index: 2;
+            padding: 2rem 1.6rem;
+
+            @include respond(xl) {
+                padding: 4rem;
+            }
+        }
+
+        &--content {
+            max-width: 29.2rem;
+
+            @include respond(xl) {
+                max-width: 100%;
+            }
+        }
+
+        &--title {
+            color: map-get( $colors, primary );
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+
+            @include respond(xl) {
+                margin-bottom: 1.2rem;
+                font-size: 3.4rem;
+            }
+        }
+
+        &--text {
+            font-size: 1.4rem;
+
+            @include respond(xl) {
+                font-size: 2rem;
+            }
+        }
+
+    }    
+}

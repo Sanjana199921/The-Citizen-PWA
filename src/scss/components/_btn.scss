@@ -1,0 +1,86 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        height: 6rem;
+        width: 100%;
+        font-family: $space-grotesk;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: map-get($colors, surface);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-style: normal;
+        font-size: 1.8rem;
+        font-weight: 500;
+        transform: translateY(0);
+        transition: transform .1s ease-in;
+        background: map-get($colors, primary);
+        transition: color .3s ease-in;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(0);
+        transition: transform .1s ease-in;
+
+        @include respond(lg) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-0.25rem);
+    }
+
+    &:active {
+        transform: translateY(0rem);
+    }
+
+    &--disabled {
+        cursor: not-allowed;
+        opacity: 0.4;
+    }
+
+    &__nav {
+        &,
+        &:link,
+        &:visited {
+            max-width: 17.5rem;
+            width: 100%;
+            height: 4rem;
+            font-size: 1.4rem !important;
+
+            @include respond(xl) {
+                height: 5rem;
+                width: 20rem;
+                font-size: 1.4rem !important;
+            }
+        }
+
+        &--1 {
+            align-self: flex-end;
+            margin-right: 0 !important;
+        }
+
+        &--2 {
+            display: none !important;
+
+            @include respond(xl) {
+                display: flex !important;
+            }
+        }
+    }
+
+    &__index {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 8rem;
+
+        @include respond(xl) {
+            max-width: 32rem;
+        }
+    }
+}

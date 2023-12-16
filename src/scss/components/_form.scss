@@ -1,0 +1,128 @@
+.form {
+
+    &__signup {
+        margin-bottom: 3.9em;
+
+        @include respond(xl) {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    &__report {
+        max-width: 56.3rem;
+        margin: 0 auto;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-of-type) {
+            margin-bottom: 2.4em;
+
+            @include respond(xl) {
+                margin-bottom: 3.2rem;
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: 3.4em;
+
+            @include respond(xl) {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    &__label {
+        color: map-get( $colors, successDark );
+        font-weight: 600;
+        font-size: 2em;
+        margin-bottom: 1em;
+
+        @include respond(xl) {
+            margin-bottom: 1.2rem;
+        }
+        
+        &--error {
+            color: map-get( $colors, error );
+        }
+
+    }
+
+    &__asterisk {
+        color: map-get( $colors, primary );
+    }
+
+    &__caption {
+        font-size: 1.6rem;
+        margin-bottom: 1.6rem;
+    }
+
+    &__input {
+        border: 0.1em solid map-get( $colors, successDark );
+        font-size: 1.6em;
+        border-radius: 0.5rem;
+        width: 100%;
+        padding: 0 1rem;
+        height: 5.6rem;
+
+        &:focus {
+            outline: none;
+        }
+
+        &--error {
+            border: 0.2em solid map-get( $colors, error );
+        }
+
+        &--hollow {
+            padding: 1rem 0.5rem;
+            background-color: transparent;
+            font-size: 1.3rem;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid map-get( $colors, surface );
+            color: map-get( $colors, surface );
+            width: 100%;
+        }
+
+        &--hollow::placeholder {
+            color: map-get( $colors, surface );
+            font-weight: 400;
+        }
+
+        &--icon {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    &__footer {
+        position: relative;
+    }
+
+    &__error {
+        color: map-get( $colors, error );
+        font-size: 1.4rem;
+        margin-bottom: .5rem;
+    }
+
+    &__alert {
+        background-color: map-get( $colors, error );
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 0.2rem;
+        display: none;
+
+        &--text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            color: map-get( $colors, surface );
+        }
+    }
+    
+}
